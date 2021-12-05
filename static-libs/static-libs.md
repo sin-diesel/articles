@@ -42,7 +42,7 @@ source кода:
 
 > `colors.h`
  
-```
+```c
 #pragma once
 
 #define RED     "\x1b[31m"
@@ -65,7 +65,7 @@ void print_color(const char* color, const char* fmt, ...);
 
 > `colors.с`
 
-```
+```c
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -97,7 +97,7 @@ void print_color(const char* color, const char* fmt, ...) {
 
 > `main.с`
 
-```
+```c
 
 #include <stdio.h>
 #include "colors.h"
@@ -164,7 +164,7 @@ U ___stack_chk_fail
 
 Мы решили проблему с большим количеством файлом путем создания библиотеки.
 
-```
+```bash
 -rwxr-xr-x  1 stassidelnikov  staff    49K Dec  5 09:55 colors
 -rw-r--r--  1 stassidelnikov  staff   411B Dec  5 09:55 colors.c
 -rw-r--r--  1 stassidelnikov  staff   340B Dec  5 09:55 colors.h
@@ -209,7 +209,7 @@ U ___stack_chk_fail
 
 > `main.с`
 
-```
+```c
 
 #include <stdio.h>
 #include <colors.h>
@@ -218,7 +218,7 @@ U ___stack_chk_fail
 
 > `colors.с`
 
-```
+```c
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -238,7 +238,7 @@ U ___stack_chk_fail
 
 После этого можно удалить локальные объектые и сорс файлы кроме main.c:
 
-```
+```bash
 -rw-r--r--  1 stassidelnikov  staff   169B Dec  5 12:23 main.c
 -rw-r--r--  1 stassidelnikov  staff   9.1K Dec  5 12:23 static-libs.md
 
@@ -246,7 +246,7 @@ U ___stack_chk_fail
 
 > `main.с`
 
-```
+```c
 
 #include <stdio.h>
 #include <colors.h>
@@ -270,11 +270,6 @@ int main() {
 Все работает:
 
 <kbd>
-    <img src="./images/output.pdf">
+    <img src="./images/output.png">
 </kbd>
-
-
-
-
-
 
