@@ -24,4 +24,3 @@ void print_color(const char* color, const char* fmt, ...) {
 
     printf("%s%s", color, output);
 }
-
